@@ -1,0 +1,27 @@
+@charset "ISO-8859-1";
+
+
+.bgimgs{
+	background-image : url("");
+	background-size : 100% 100%;
+	background-attachment: fixed;
+	width: 100%;
+	height:auto;
+	opacity: 85%;
+
+	
+}
+
+
+
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+.a{
+	padding-right: 34px;
+}
+
+.b{
+background-color: #f4facf;
+}
