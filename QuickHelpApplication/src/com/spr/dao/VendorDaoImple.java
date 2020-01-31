@@ -11,6 +11,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
+import com.spr.dto.Services;
 import com.spr.dto.Vendor;
 
 @Repository
@@ -114,4 +115,31 @@ public class VendorDaoImple implements VendorDao{
 			return vend;
 	}
 
+	@Override
+	public Services showMap(int id) {
+		System.out.println("showMapcalled");
+		 String sql = "SELECT *  FROM vendorservice where service_id=? ";
+		 System.out.println(sql);
+		 Services services1=jdbctemplate.queryForObject(sql, new Object[]{id}, new RowMapper<Services>() {
+				@Override
+				public Services mapRow(ResultSet rs, int rowNum) throws SQLException {
+					 System.out.println("inside1");
+					 Services services=new Services();
+					//log.setvFirstName(vFirstName);
+					 services.setServiceName(rs.getString("service_name"));
+					 services.setServiceDiscription("service_description");
+					 services.setContact("service_contact");
+					 services.setAddress("service_address");
+					 services.setLongitude(Long.parseLong(rs.getString("latitude")));
+					 services.setLongitude(Long.parseLong(rs.getString("longitude")));
+					 services.setCity(rs.getString("city"));
+					 System.out.println("inside2showmap");
+					
+					return services;
+				}
+			});
+		    System.out.println(services1 + "Log1111111");
+			return services1;
+	}
+	
 }

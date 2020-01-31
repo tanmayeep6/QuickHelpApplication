@@ -45,10 +45,10 @@ public class LoginController {
 				mv.setViewName("HomepageAdmin");
 				}
 				else if(session.getAttribute("type").equals("U")){
-				mv.setViewName("Homepage");
+				mv.setViewName("UserHome");
 				}
 				else{
-				mv.setViewName("HomepageVendor");
+				mv.setViewName("vendorHome");
 				}
 			}
 			else{
@@ -64,18 +64,12 @@ public class LoginController {
 	public ModelAndView userLogin(@RequestParam("email") String email, @RequestParam("password") String password) {
 		System.out.println("login////////");
 		ModelAndView mv = new ModelAndView();
-		System.out.println("log11");
 		Login log = new Login();
-		System.out.println("log12");
 		log.setEmail(email);
-		System.out.println("log13");
 		log.setPassword(password);
-		System.out.println("log14");
 
 		mv.addObject("success", "Login Successful.");
-		System.out.println("log2");
 		Login log1 = loginservice.validateUser(log);
-		System.out.println("log3");
 		session.setAttribute("email", log1.getEmail());
 		session.setAttribute("type", log1.getUserType());
 		session.setAttribute("slog", "1");
@@ -90,7 +84,7 @@ public class LoginController {
 				customer.setEmail(email);
 				Customer customer1 = customerservice.getCustomerName(customer);
 				session.setAttribute("customerName",customer1.getC_first_name() );
-				mv.setViewName("Homepage");
+				mv.setViewName("UserHome");
 			}
 			else {
 				System.out.println(" received................");
@@ -99,7 +93,7 @@ public class LoginController {
 				System.out.println("Before"+email);
 				Vendor vendor1=vendorservice.getVendorName(vendor);
 				session.setAttribute("vendorName",vendor1.getvFirstName());
-				mv.setViewName("HomepageVendor");
+				mv.setViewName("vendorHome");
 			}
 		try {
 			

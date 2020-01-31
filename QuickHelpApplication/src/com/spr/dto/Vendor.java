@@ -2,16 +2,32 @@ package com.spr.dto;
 
 import java.util.Date;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
+
 public class Vendor {
 
+	@NotNull(message="required")
 	private Date date;
+	@NotNull(message="required")
 	private String vFirstName;
+	@NotNull(message="required")
 	private String vLastName;
+	@NotNull(message="required")
 	private String vgender;
+	 @Size(min=0,max=10)
+	@NotNull(message="required")
 	private long vcontactNo;
+	@NotNull(message="required")
+	@Email
 	private String vemail;
+	@NotNull(message="required")
 	private String password;
+	@NotNull(message="required")
 	private String area;
+	@NotNull(message="required")
 	private String occupation;
 	
 	

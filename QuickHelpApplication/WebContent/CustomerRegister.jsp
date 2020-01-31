@@ -45,10 +45,10 @@
 			<h2 class="text-center pb-3">Customer Registration</h2>
 			<div>
 			<label class="font-weight-bold">First Name:</label>
-			<div class="form-group"><input class="form-control" type="text" id="v_first_name" name="c_first_name" placeholder="First Name"><div></div> </div>
+			<div class="form-group"><input class="form-control" type="text" id="v_first_name" name="c_first_name" placeholder="First Name" required="required"><div></div> </div>
 			</div>
 			<label class="font-weight-bold">Last Name:</label>
-			<div class="form-group"><input class="form-control" type="text" id="v_last_name" name="c_last_name" placeholder="Last Name"><div></div> </div>
+			<div class="form-group"><input class="form-control" type="text" id="v_last_name" name="c_last_name" placeholder="Last Name" required="required"><div></div> </div>
 			<div class="form-group font-weight-bold pt-2 pb-2" >Gender :
 			<select class="text-dark" name = "gender" id = "
 			gender">
@@ -61,18 +61,18 @@
 			<!-- <div class="form-group"><input class="form-control" type="text" name="gender" placeholder="Gender"> </div>
 			<div class="form-group"><input class="form-control" type="text" name="gender" placeholder="Gender"> </div>-->
 			<label class="font-weight-bold">Contact:</label>
-			<div class="form-group"><input class="form-control" type="text" id="contact" name="contact" placeholder="Contact"><div></div> </div>
+			<div class="form-group"><input class="form-control" type="text" id="contact" name="contact" placeholder="Contact" required="required"><div></div> </div>
 			<label class="font-weight-bold">Email:</label>
-			<div class="form-group"><input class="form-control" type="email" id="mail" name="email" placeholder="abc@xyz.com"><div></div>  </div>
+			<div class="form-group"><input class="form-control" type="email" id="mail" name="email" placeholder="abc@xyz.com" required="required"><div></div>  </div>
 	
 			 <label class="font-weight-bold">City:</label>
-			 <div class="form-group"><input class="form-control" type="text" id="address" name="address" placeholder="City"><div></div>  </div>
+			 <div class="form-group"><input class="form-control" type="text" id="address" name="address" placeholder="City" required="required"><div></div>  </div>
 			<label class="font-weight-bold">Occupation:</label>
-			<div class="form-group"><input class="form-control" type="text" id="occupation" name="occupation" placeholder="Occupation"><div></div>  </div>
+			<div class="form-group"><input class="form-control" type="text" id="occupation" name="occupation" placeholder="Occupation" required="required"><div></div>  </div>
 			<label class="font-weight-bold">Password:</label>
-			<div class="form-group"><input class="form-control"  type="password" id="Password" name="password" placeholder="Password"><div></div> </div>
+			<div class="form-group"><input class="form-control"  type="password" id="Password" name="password" placeholder="Password" required="required"><div></div> </div>
 			<label class="font-weight-bold" >Re-enter Password:</label>
-			<div class="form-group"><input class="form-control"  type="password" id="c_Password" name="c_Password" placeholder="Confirm Password"><div></div> </div>
+			<div class="form-group"><input class="form-control"  type="password" id="c_Password" name="c_Password" placeholder="Confirm Password" required="required"><div></div> </div>
 			<div class="d-flex justify-content-center">
 			<input class="btn btn-primary mb-4" type="submit" value="Register">
 			</div>
@@ -88,8 +88,8 @@
 <script>
     function validation()
     {
-        var first=document.getElementById('v_first_name').value;
-        var last=document.getElementById('v_last_name').value;
+        var first=document.getElementById('c_first_name').value;
+        var last=document.getElementById('c_last_name').value;
         var pass=document.getElementById('Password').value;
         var conpass=document.getElementById('c_Password').value;
         var mobile=document.getElementById('contact').value;

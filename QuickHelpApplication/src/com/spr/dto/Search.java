@@ -2,7 +2,7 @@ package com.spr.dto;
 
 public class Search {
 private String city;
-private String service;
+private String serviceType;
 public Search() {
 	super();
 	// TODO Auto-generated constructor stub
@@ -13,10 +13,11 @@ public String getCity() {
 public void setCity(String city) {
 	this.city = city;
 }
-public String getService() {
-	return service;
+public String getServiceType() {
+	return serviceType;
 }
-public void setService(String service) {
-	this.service = service;
+public void setServiceType(String serviceType) {
+	this.serviceType = serviceType;
 }
+
 }

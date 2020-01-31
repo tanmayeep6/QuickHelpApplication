@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.spr.dto.Services;
 import com.spr.dto.Vendor;
+import com.spr.service.ServicesService;
 import com.spr.service.VendorServiceImple;
 
 @Controller
@@ -19,6 +21,9 @@ public class VendorContoller {
 
 	@Autowired
 	private VendorServiceImple vendorService;
+	@Autowired
+	private ServicesService addserv;
+
 	
 
 	public void setVendorService(VendorServiceImple vendorService) {
@@ -53,4 +58,25 @@ public class VendorContoller {
 	 
 	    return model;
 	}
+	@RequestMapping(value="/addservice",method=RequestMethod.POST)
+	public String insert(@ModelAttribute("services")Services services,ModelMap model) {
+		
+		try {
+			System.out.println("hey"+services);
+			boolean check= addserv.addServices(services);
+			
+			if (check) {
+				System.out.println("service is been added");
+				return "VendAddService";
+			} else {
+				System.out.println("service not added");
+				return "VendAddService";
+			}
+			
+		}catch(Exception e){
+			System.out.println("Not added");
+			return "Register";
+		}
+	}
+
 }

@@ -2,17 +2,34 @@ package com.spr.dto;
 
 import java.util.Date;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
+
 public class Customer {
 	
+	@NotNull(message="required")
 	private Date date;
+	@NotNull(message="required")
 	private String c_first_name;
+	@NotNull(message="required")
 	private String c_last_name;
+	@NotNull(message="required")
 	private String gender;
+	 @Size(min=0,max=10)
+	@NotNull(message="required")
 	private String contact;
+	@Email
+	@NotNull(message="required")
 	private String email;
+	@NotNull(message="required")
 	private String password;
+	@NotNull(message="required")
 	private String zipcode;
+	@NotNull(message="required")
 	private String address;
+	@NotNull(message="required")
 	private String occupation;
 	
 	

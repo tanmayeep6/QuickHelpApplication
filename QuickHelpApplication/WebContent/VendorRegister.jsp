@@ -20,7 +20,7 @@
 <div class="bgimgs">
 	<nav class="navbar navbar-expand-md navbar-dark " style="background-color: black; opacity: 100%">
 		<div class="container">
-		<a href="Indexs.jsp" class="navbar-brand title ">QuickHelp &trade;</a>
+		<a href="Index.jsp" class="navbar-brand title ">QuickHelp &trade;</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#a">
 				<span class="navbar-toggler-icon"></span>		
 			</button>
@@ -45,10 +45,10 @@
 			<h2 class="text-center pb-3">Vendor Registration</h2>
 			<div>
 			<label class="font-weight-bold">First Name:</label>
-			<div class="form-group"><input class="form-control" type="text" id="v_first_name" name="vFirstName" placeholder="First Name"><div></div> </div>
+			<div class="form-group"><input class="form-control" type="text" id="v_first_name" name="vFirstName" placeholder="First Name" required="required"><div></div> </div>
 			</div>
 			<label class="font-weight-bold">Last Name:</label>
-			<div class="form-group"><input class="form-control" type="text" id="v_last_name" name="vLastName" placeholder="Last Name"><div></div> </div>
+			<div class="form-group"><input class="form-control" type="text" id="v_last_name" name="vLastName" placeholder="Last Name" required="required"><div></div> </div>
 			<div class="form-group font-weight-bold pt-2 pb-2" >Gender :
 			<select class="text-dark" name = "vgender" id = "
 			gender">
@@ -61,18 +61,18 @@
 			<!-- <div class="form-group"><input class="form-control" type="text" name="gender" placeholder="Gender"> </div>
 			<div class="form-group"><input class="form-control" type="text" name="gender" placeholder="Gender"> </div>-->
 			<label class="font-weight-bold">Contact:</label>
-			<div class="form-group"><input class="form-control" type="text" id="contact" name="vcontactNo" placeholder="Contact"><div></div> </div>
+			<div class="form-group"><input class="form-control" type="text" id="contact" name="vcontactNo" placeholder="Contact" required="required"><div></div> </div>
 			<label class="font-weight-bold">Email:</label>
-			<div class="form-group"><input class="form-control" type="email" id="mail" name="vemail" placeholder="abc@xyz.com"><div></div>  </div>
+			<div class="form-group"><input class="form-control" type="email" id="mail" name="vemail" placeholder="abc@xyz.com" required="required"><div></div>  </div>
 	
 			 <label class="font-weight-bold">City:</label>
-			 <div class="form-group"><input class="form-control" type="text" id="address" name="area" placeholder="City"><div></div>  </div>
+			 <div class="form-group"><input class="form-control" type="text" id="address" name="area" placeholder="City" required="required"><div></div>  </div>
 			<label class="font-weight-bold">Service:</label>
-			<div class="form-group"><input class="form-control" type="text" id="occupation" name="occupation" placeholder="Service"><div></div>  </div>
+			<div class="form-group"><input class="form-control" type="text" id="occupation" name="occupation" placeholder="Service" required="required"><div></div>  </div>
 			<label class="font-weight-bold">Password:</label>
-			<div class="form-group"><input class="form-control"  type="password" id="Password" name="Password" placeholder="Password"><div></div> </div>
+			<div class="form-group"><input class="form-control"  type="password" id="Password" name="Password" placeholder="Password" required="required"><div></div> </div>
 			<label class="font-weight-bold" >Re-enter Password:</label>
-			<div class="form-group"><input class="form-control"  type="password" id="c_Password" name="c_Password" placeholder="Confirm Password"><div></div> </div>
+			<div class="form-group"><input class="form-control"  type="password" id="c_Password" name="c_Password" placeholder="Confirm Password" required="required"><div></div> </div>
 			<div class="d-flex justify-content-center">
 			<input class="btn btn-primary mb-4" type="submit" value="Register">
 			</div>

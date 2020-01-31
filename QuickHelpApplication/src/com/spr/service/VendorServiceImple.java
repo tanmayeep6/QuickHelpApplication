@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.spr.dao.VendorDaoImple;
+import com.spr.dto.Services;
 import com.spr.dto.Vendor;
 
 @Service
@@ -13,6 +14,8 @@ public class VendorServiceImple implements VendorService {
 
 	@Autowired
 	private VendorDaoImple vendorimple;
+	
+	
 	
 	@Override
 	public void insert(Vendor vendor) {
@@ -23,4 +26,9 @@ public class VendorServiceImple implements VendorService {
 		System.out.println("Vendor services..........");
 		return vendorimple.getAll();
 	}
+	@Override
+	public Services showMap(int id) {
+		return vendorimple.showMap(id);
+	}
+	
 }

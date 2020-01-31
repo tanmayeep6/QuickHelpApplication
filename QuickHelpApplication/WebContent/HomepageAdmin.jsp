@@ -22,10 +22,14 @@
 
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark text-center mb-5">
 	    <div class="container">
-	        <div class="navbar-brand "><h1>Admin <%=show %> </h1></div>
-	      
-	    </div>
+	      <div class="navbar-brand "><h1>QuickHelp &trade;</h1></div>
+	        <form method="post" action="logout">
+					<input class="btn btn-light" type="submit" value="Logout"/>
+			</form>
+	        
+	        </div>
 	</nav>
+	<h1>Admin <%=show %> </h1>
 	<div style="display:flex; align-items:center; justify-content:center "  >
 	  
 	   <form action="userlist" method="get">
